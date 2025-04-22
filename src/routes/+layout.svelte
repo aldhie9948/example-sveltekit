@@ -2,7 +2,7 @@
 	import Header from './Header.svelte';
 	import '../app.css';
 
-	let { children } = $props();
+	let { children, data } = $props();
 </script>
 
 <div class="app">
@@ -13,6 +13,7 @@
 	</main>
 
 	<footer>
+		<small class="block max-w-10/12 break-words">{data?.cookies || 'hello world'}</small>
 		<p>
 			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
 		</p>
